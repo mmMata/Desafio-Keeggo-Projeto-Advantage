@@ -1,0 +1,46 @@
+#language : pt
+
+@cadastro
+Funcionalidade: Cadastro
+
+@cadastrovalido
+Esquema do Cenario: Realizar cadastro válido
+Dado que eu esteja no site Advantage
+E clique no icone de usuario
+E clique em criar nova conta
+E preencha o nome de usuario 
+E preencha o email 
+E preencha a senha  
+E confirme a senha 
+E preencha o primeiro nome 
+E preencha o segundo nome  
+E preencha o número de telefone
+E selecione o pais
+E preencha a cidade 
+E preencha o endereço
+E preencha o estado provincia regiao
+E preencha o código postal
+E clique em concorde com os termos de condições
+E clique em registrar
+Então sou direcionado para tela inicial da pagina
+
+@cadastroinvalido
+Esquema do Cenario: Realizar cadastro inválido
+Dado que eu esteja no site Advantage
+E clique no icone de usuario
+E clique em criar nova conta
+E preencha o nome de usuario ja existente
+E preencha o email 
+E preencha a senha  
+E confirme a senha 
+E preencha o primeiro nome 
+E preencha o segundo nome  
+E preencha o número de telefone
+E selecione o pais
+E preencha a cidade 
+E preencha o endereço
+E preencha o estado
+E clique em concordo com os termos de condições
+E clique em registrar
+Então permanesso na tela de cadastro e valido a mensagem de erro
+

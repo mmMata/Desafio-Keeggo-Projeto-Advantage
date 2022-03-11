@@ -1,0 +1,10 @@
+package br.com.advantage.helpers;
+
+public class Manipulacao {
+	
+	public static void main(String[] args)
+	{
+		
+	}
+
+}

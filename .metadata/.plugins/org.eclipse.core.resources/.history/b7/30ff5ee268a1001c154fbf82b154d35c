@@ -1,0 +1,17 @@
+#language : pt
+
+@logout
+Funcionalidade: Logout
+
+@realizarlogout
+Esquema do Cenario: Realizar logout 
+Dado que eu esteja na pagina
+Quando clico no user 
+E preencho o login
+E preencho a password
+E clico em logar
+E realizo o login
+E clico em user apos o login
+Então realizo o logout
+
+

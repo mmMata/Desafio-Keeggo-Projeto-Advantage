@@ -1,0 +1,45 @@
+package br.com.advantage.logic;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+import br.com.advantage.helpers.Constant;
+import br.com.advantage.helpers.ExcelUtils;
+import br.com.advantage.page.CadastroPage;
+
+public class Cadastro {
+
+	final WebDriver driver;
+
+	public Cadastro(WebDriver driver) {
+
+		this.driver = driver;
+	}
+
+	/**
+	 * Classe que preenche todos os campos da página de registro(RegisterPage):
+	 * Recebe como parâmetro um objeto do tipo integer
+	 **/
+	public void setUserRegister(int numberUser) throws Exception {
+
+		CadastroPage cadastroPage = PageFactory.initElements(driver, CadastroPage.class);
+		ExcelUtils.setExcelFile(Constant.File_DataUserRegister, "Users");
+
+		cadastroPage.inputUsernameRegister(ExcelUtils.getCellData(numberUser, 1));
+		cadastroPage.inputEmailRegister(ExcelUtils.getCellData(numberUser, 2));
+		cadastroPage.inputPasswordRegister(ExcelUtils.getCellData(numberUser, 3));
+		cadastroPage.inputConfirmPasswordRegister(ExcelUtils.getCellData(numberUser, 3));
+
+		cadastroPage.inputFirstNameRegister(ExcelUtils.getCellData(numberUser, 4));
+		cadastroPage.inputLastNameRegister(ExcelUtils.getCellData(numberUser, 5));
+		cadastroPage.inputPhoneNumberRegister(ExcelUtils.getCellData(numberUser, 6));
+
+		cadastroPage.boxCountryRegister(ExcelUtils.getCellData(numberUser, 7));
+		cadastroPage.inputCityRegister(ExcelUtils.getCellData(numberUser, 8));
+		cadastroPage.inputAdressRegister(ExcelUtils.getCellData(numberUser, 9));
+		cadastroPage.inputSPRRegister(ExcelUtils.getCellData(numberUser, 10));
+		cadastroPage.inputPostalCodeRegister(ExcelUtils.getCellData(numberUser, 11));
+
+	}
+
+}

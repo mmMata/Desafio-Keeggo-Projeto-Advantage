@@ -1,0 +1,16 @@
+package br.com.advantage.runner;
+
+public class Runner {
+	
+	@RunWith(Cucumber.class)
+	@CucumberOptions(features = "classpath:features/loginUsuario",
+	glue = "br.com.automationpractice.steps",
+	//tags = "@loginvalido",
+	plugin = {"pretty", "html:target/report/report.html", "json:target/report/report.json"},
+	monochrome = true)
+
+	public class Runner {
+
+	}
+
+}

@@ -1,0 +1,76 @@
+package br.com.advantage.logic;
+
+import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+
+
+import br.com.advantage.page.LogoutPage;
+
+public class LogoutLogic {
+
+	private LogoutPage logoutPage;
+	
+	final WebDriver driver;
+
+	public LogoutLogic(WebDriver driver) 
+	{
+		logoutPage = new LogoutPage(driver);
+		this.driver = driver;
+	}
+	
+	public void validarSite()
+	{
+		driver.getCurrentUrl().equals("http://advantageonlineshopping.com/#/");
+	}
+	
+	public void clicarNoIconeUser() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		JavascriptExecutor jsexe = (JavascriptExecutor) driver;
+		Thread.sleep(3000);
+		jsexe.executeScript("javascript:void(0)", logoutPage.buttonUser);
+		logoutPage.buttonUser.click();
+	}
+	
+	public void preencherUsuario(String usuario) throws InterruptedException
+	{
+		
+		Thread.sleep(3000);
+		logoutPage.inputUsername.sendKeys(usuario);
+		
+	}
+	
+	public void preencherSenha(String senha) throws InterruptedException
+	{
+		Thread.sleep(1000);
+		logoutPage.inputPassword.sendKeys(senha);
+		
+	}
+	
+	public void clicarEmEntrar()
+	{
+		logoutPage.buttonSignIn.click();
+	}
+	
+	public void validarLogin() throws InterruptedException
+	{
+		Thread.sleep(1000);
+		Assert.assertTrue(logoutPage.getName.isDisplayed());
+		
+	}
+	
+	public void validaLogOut()
+	{
+		driver.getCurrentUrl().equals("http://advantageonlineshopping.com/#/");
+	}
+	
+	public void clicarEmSignOut() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		JavascriptExecutor jsexe = (JavascriptExecutor) driver;
+		Thread.sleep(3000);
+		jsexe.executeScript("javascript:void(0)", logoutPage.buttonSignOut);
+		logoutPage.buttonSignOut.click();
+	}
+}

@@ -1,0 +1,83 @@
+package br.com.advantage.steps;
+
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+import br.com.advantage.logic.Cadastro;
+import br.com.advantage.logic.CadastroLogic;
+import br.com.advantage.logic.DriverElement;
+import io.cucumber.java.After;
+import io.cucumber.java.pt.Dado;
+import io.cucumber.java.pt.E;
+import io.cucumber.java.pt.Entao;
+import io.cucumber.java.pt.Quando;
+
+public class CadastroStep {
+	
+	private CadastroLogic cadastroLogic;
+	private Cadastro cadastro;
+	private WebDriver driver;
+	
+	@After
+	public void finaliza() {
+		DriverElement.quitDriver(driver);
+	}
+	
+	@Dado("que eu esteja no site Advantage")
+	public void que_eu_esteja_no_site_advantage() throws Throwable
+	{
+		driver = DriverElement.getChromeDriver();
+		cadastroLogic = PageFactory.initElements(driver, CadastroLogic.class);
+		cadastroLogic.validacaoDoSiteAdvantage();
+		
+	}
+
+	@Quando("clico no icone de usuario")
+	public void clique_no_icone_de_usuario() throws Throwable
+		{
+	  
+		cadastroLogic.clicarNoIconeUsuario();
+		}
+
+	@E("clico em criar nova conta")
+	public void clique_em_criar_nova_conta() throws Throwable
+	{
+		
+		cadastroLogic.clicarEmCriarNovaConta();
+	}
+
+	
+	@Quando("preencho os dados para cadastro")
+	public void preencho_os_dados_para_cadastro() throws Throwable
+	{
+	  
+		cadastro.setUserRegister(1);
+	}
+	
+	@E("concordo com os termos de condicoes")
+	public void clique_em_concordo_com_os_termos_de_condicoes() 
+	{
+		cadastroLogic.clicarEmConcordarComOsTermos();
+	}
+
+	@E("clico em registrar")
+	public void clique_em_registrar() 
+	{
+	 cadastroLogic.clicarEmRegistrar();    
+	}
+
+	@Entao("sou direcionado para tela inicial da pagina") 
+	public void sou_direcionado_para_tela_inicial_da_pagina() throws Throwable
+	{
+	 
+		cadastroLogic.validarTelaInicial();
+	}
+
+	@Entao("permanesso na tela de cadastro")
+	public void permanesso_na_tela_de_cadastro_e_valido_a_mensagem_de_erro() throws Throwable
+	{
+	   
+		cadastroLogic.validarErroDeCadastro();
+	}
+}

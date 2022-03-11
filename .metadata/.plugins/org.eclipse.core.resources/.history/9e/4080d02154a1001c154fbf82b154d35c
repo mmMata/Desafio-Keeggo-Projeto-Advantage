@@ -1,0 +1,50 @@
+package br.com.advantage.logic;
+
+import org.openqa.selenium.WebDriver;
+
+import br.com.advantage.page.HomePage;
+import br.com.advantage.page.LoginPage;
+
+public class LoginLogic {
+
+	private LoginPage loginPage;
+	private HomePage homePage;
+
+	final WebDriver driver;
+
+	public LoginLogic(WebDriver driver) 
+	{
+		loginPage = new LoginPage(driver);
+		this.driver = driver;
+	}
+	
+//	public void validarSite()
+//	{
+//		
+//	}
+	
+	public void preencherUsuario(String usuario)
+	{
+		loginPage.inputPassword.sendKeys(usuario);
+	}
+	
+	public void preencherSenha(String senha)
+	{
+		loginPage.inputPassword.sendKeys(senha);
+	}
+	
+	public void clicarEmEntrar()
+	{
+		loginPage.buttonSignIn.click();
+	}
+	
+	public void validarLogin()
+	{
+		assert(driver.getPageSource()).contains("Max_Steel249");
+	}
+	
+	public void validarTelaDeLogin()
+	{
+		assert(driver.getPageSource()).contains("OR");
+	}
+}

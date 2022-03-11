@@ -1,0 +1,24 @@
+package br.com.advantage.page;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
+
+public class LogoutPage {
+	
+	final WebDriver driver;
+
+	public LogoutPage(WebDriver driver) {
+
+		PageFactory.initElements(driver, this);
+
+		this.driver = driver;
+	}
+	
+	@FindBy(how = How.XPATH, using = "(//label[@class='option roboto-medium ng-scope'])[3]")
+
+	public WebElement buttonSignOut;
+
+}

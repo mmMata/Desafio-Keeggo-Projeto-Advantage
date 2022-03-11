@@ -1,0 +1,7 @@
+#language : pt
+
+@login
+Funcionalidade: Login
+
+@cadastrovalido
+Esquema do cenario: Realizar login valido

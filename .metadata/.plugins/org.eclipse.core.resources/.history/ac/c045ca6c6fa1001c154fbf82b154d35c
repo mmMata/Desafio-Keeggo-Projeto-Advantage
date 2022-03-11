@@ -1,0 +1,35 @@
+package br.com.advantage.logic;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+
+
+import br.com.advantage.page.LogoutPage;
+
+public class LogoutLogic {
+
+	private LogoutPage logoutPage;
+	
+	
+	final WebDriver driver;
+
+	public LogoutLogic(WebDriver driver) 
+	{
+		logoutPage = new LogoutPage(driver);
+		this.driver = driver;
+	}
+	
+	public void clicarEmSignOut() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		JavascriptExecutor jsexe = (JavascriptExecutor) driver;
+		Thread.sleep(3000);
+		jsexe.executeScript("javascript:void(0)", logoutPage.buttonSignOut);
+		logoutPage.buttonSignOut.click();
+	}
+	
+	public void validaLogOut()
+	{
+		driver.getCurrentUrl().equals("http://advantageonlineshopping.com/#/");
+	}
+}

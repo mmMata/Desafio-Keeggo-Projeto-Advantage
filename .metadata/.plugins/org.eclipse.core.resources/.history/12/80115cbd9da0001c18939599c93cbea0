@@ -1,0 +1,13 @@
+package br.com.advantage.helpers;
+
+import java.io.File;
+
+public class Manipulacao {
+	
+	public static void main(String[] args)
+	{
+		File file = new File("C:\\Users\\matheus.mata\\Desktop\\Projeto Keeggo Advantage\\massas");
+		FileInputStream massas = new FileInputStream(file);
+	}
+
+}

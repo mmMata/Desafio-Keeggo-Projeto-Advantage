@@ -1,0 +1,73 @@
+package br.com.advantage.steps;
+
+import org.openqa.selenium.WebDriver;
+
+import br.com.advantage.logic.LoginLogic;
+import br.com.advantage.page.HomePage;
+import io.cucumber.java.pt.Dado;
+import io.cucumber.java.pt.E;
+import io.cucumber.java.pt.Entao;
+import io.cucumber.java.pt.Quando;
+
+public class LoginStep {
+
+	private LoginLogic loginLogic;
+	private HomePage homePage;
+	
+	final WebDriver driver;
+
+	public LoginStep(WebDriver driver) 
+	{
+		loginLogic = new LoginLogic(driver);
+		this.driver = driver;
+	}
+	
+	
+	@Dado("que eu esteja no site")
+	public void que_eu_esteja_no_site() {
+	   
+		loginLogic.validarSite();
+	}
+
+	@Quando("clico no icone user")
+	public void clico_no_icone_user() {
+	
+		loginLogic.clicarNoIconeUser();
+	}
+
+	@E("preencho o usuario")
+	public void preencho_o_nome_de_usuario() {
+	  
+		loginLogic.preencherUsuario("Max_Steel249");
+	}
+	
+	@E("preencho uma senha")
+	public void preencho_uma_senha() {
+	    
+		loginLogic.preencherSenha("123456aA");
+	}
+
+	@E("clico em entrar")
+	public void clico_em_entrar() {
+	   
+		loginLogic.clicarEmEntrar();
+	}
+
+	@Entao("realizo o login")
+	public void realizo_o_login() {
+		
+		loginLogic.validarLogin();
+	}
+
+	@E("preencho a senha invalida")
+	public void preencho_a_senha_invalida() {
+	  
+		loginLogic.preencherSenha("12345Ss");
+	}
+
+	@Entao("permanesso na tela de login")
+	public void permanesso_na_tela_de_login() {
+	    
+		loginLogic.validarTelaDeLogin();
+	}
+}

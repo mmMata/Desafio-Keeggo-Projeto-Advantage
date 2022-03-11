@@ -1,0 +1,7 @@
+#language : pt
+
+@logout
+Funcionalidade: Logout
+
+@realizarlogout
+Esquema do Cenario: Realizar logout 

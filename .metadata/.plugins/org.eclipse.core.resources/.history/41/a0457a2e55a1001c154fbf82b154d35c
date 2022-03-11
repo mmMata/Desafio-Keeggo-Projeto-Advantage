@@ -1,0 +1,22 @@
+#language : pt
+
+@login
+Funcionalidade: Login
+
+@cadastrovalido
+Esquema do Cenario: Realizar login valido
+Dado que eu esteja no site
+Quando clico no icone user
+E preencho o nome de usuario
+E preencho a senha 
+E clico em entrar
+Entao realizo o login
+
+@cadastroinvalido
+Esquema do Cenario: Realizar login invalido
+Dado que eu esteja no site
+Quando clico no icone user
+E preencho o nome de de usuario
+E preencho a senha invalida
+E clico em entrar
+Entao permanesso na tela de login

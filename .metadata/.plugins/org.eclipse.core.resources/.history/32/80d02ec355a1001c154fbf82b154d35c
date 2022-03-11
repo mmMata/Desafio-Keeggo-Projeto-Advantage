@@ -1,0 +1,60 @@
+package br.com.advantage.steps;
+
+import org.openqa.selenium.WebDriver;
+
+import br.com.advantage.logic.LoginLogic;
+import br.com.advantage.page.HomePage;
+import io.cucumber.java.pt.Dado;
+import io.cucumber.java.pt.E;
+import io.cucumber.java.pt.Entao;
+import io.cucumber.java.pt.Quando;
+
+public class LoginStep {
+
+	private LoginLogic loginLogic;
+	private HomePage homePage;
+	
+	final WebDriver driver;
+
+	public LoginStep(WebDriver driver) 
+	{
+		loginLogic = new LoginLogic(driver);
+		this.driver = driver;
+	}
+	
+	
+	@Dado("que eu esteja no site")
+	public void que_eu_esteja_no_site() {
+	   
+	}
+
+	@Quando("clico no icone user")
+	public void clico_no_icone_user() {
+	
+	}
+
+	@E("preencho o nome de usuario")
+	public void preencho_o_nome_de_usuario() {
+	  
+	}
+
+	@E("clico em entrar")
+	public void clico_em_entrar() {
+	   
+	}
+
+	@E("realizo o login")
+	public void realizo_o_login() {
+
+	}
+
+	@E("preencho a senha invalida")
+	public void preencho_a_senha_invalida() {
+	  
+	}
+
+	@Entao("permanesso na tela de login")
+	public void permanesso_na_tela_de_login() {
+	    
+	}
+}

@@ -1,0 +1,23 @@
+package br.com.advantage.logic;
+
+import org.openqa.selenium.WebDriver;
+
+import br.com.advantage.page.CadastroPage;
+
+public class CadastroLogic {
+	
+	private CadastroPage cadastroPage;
+	
+	final WebDriver driver;
+	
+	public CadastroLogic(WebDriver driver) {
+
+		this.driver = driver;
+	}
+	
+	public void validacaoDoSiteAdvantage()
+	{
+		
+	}
+
+}

@@ -1,0 +1,21 @@
+#language : pt
+
+@cadastro
+Funcionalidade: Cadastro
+
+@cadastrovalido
+Esquema do Cenario: Realizar cadastro válido
+Dado que eu esteja no site Advantage
+Quando clico no icone de usuario
+E clico em criar nova conta
+E preencho os dados para cadastro
+Entao sou direcionado para tela inicial da pagina
+
+@cadastroinvalido
+Esquema do Cenario: Realizar cadastro inválido
+Dado que eu esteja no site Advantage
+Quando clico no icone de usuario
+E clico em criar nova conta
+E preencho os dados para cadastro
+Entao permanesso na tela de cadastro
+

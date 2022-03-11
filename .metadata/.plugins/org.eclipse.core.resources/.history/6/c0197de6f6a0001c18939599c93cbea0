@@ -1,0 +1,35 @@
+package br.com.advantage.steps;
+
+
+import br.com.advantage.logic.CadastroLogic;
+import io.cucumber.java.pt.Dado;
+import io.cucumber.java.pt.E;
+import io.cucumber.java.pt.Entao;
+import io.cucumber.java.pt.Quando;
+
+public class CadastroStep {
+	
+	private CadastroLogic cadastroLogic;
+	
+	
+	@Dado("que eu esteja no site Advantage")
+	public void que_eu_esteja_no_site_advantage() {
+	 
+		cadastroLogic.validacaoDoSiteAdvantage();
+		
+	}
+
+	@Quando("clico no icone de usuario")
+	public void clique_no_icone_de_usuario() {
+	  
+		cadastroLogic.clicarNoIconeUsuario();
+	}
+
+	@E("clique em criar nova conta")
+	public void clique_em_criar_nova_conta() {
+		
+		cadastroLogic.clicarEmCriarNovaConta();
+	}
+
+
+}

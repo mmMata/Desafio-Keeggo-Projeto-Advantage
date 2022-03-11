@@ -1,0 +1,53 @@
+package br.com.advantage.steps;
+
+
+import br.com.advantage.logic.Cadastro;
+import br.com.advantage.logic.CadastroLogic;
+import io.cucumber.java.pt.Dado;
+import io.cucumber.java.pt.E;
+import io.cucumber.java.pt.Entao;
+import io.cucumber.java.pt.Quando;
+
+public class CadastroStep {
+	
+	private CadastroLogic cadastroLogic;
+	private Cadastro cadastro;
+	
+	@Dado("que eu esteja no site Advantage")
+	public void que_eu_esteja_no_site_advantage() {
+	 
+		cadastroLogic.validacaoDoSiteAdvantage();
+		
+	}
+
+	@Quando("clico no icone de usuario")
+	public void clique_no_icone_de_usuario() {
+	  
+		cadastroLogic.clicarNoIconeUsuario();
+	}
+
+	@E("clique em criar nova conta")
+	public void clique_em_criar_nova_conta() {
+		
+		cadastroLogic.clicarEmCriarNovaConta();
+	}
+
+	
+	@Quando("preencho os dados para cadastro")
+	public void preencho_os_dados_para_cadastro() throws Exception {
+	  
+		cadastro.setUserRegister(1);
+	}
+
+	@Entao("sou direcionado para tela inicial da pagina")
+	public void sou_direcionado_para_tela_inicial_da_pagina() {
+	 
+		cadastroLogic.validarTelaInicial();
+	}
+
+	@Entao("permanesso na tela de cadastro")
+	public void permanesso_na_tela_de_cadastro_e_valido_a_mensagem_de_erro() {
+	   
+		cadastroLogic.validarErroDeCadastro();
+	}
+}

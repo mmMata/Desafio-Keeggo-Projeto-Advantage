@@ -1,0 +1,81 @@
+package br.com.advantage.steps;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+import br.com.advantage.logic.DriverElement;
+import br.com.advantage.logic.LogoutLogic;
+import io.cucumber.java.After;
+import io.cucumber.java.pt.Dado;
+import io.cucumber.java.pt.E;
+import io.cucumber.java.pt.Entao;
+import io.cucumber.java.pt.Quando;
+
+public class LogoutStep {
+
+	private LogoutLogic logoutLogic;
+	private WebDriver driver;
+
+	public LogoutStep()
+	{
+	  logoutLogic = new LogoutLogic(driver);	
+	}
+	
+	@After
+	public void finaliza() {
+		DriverElement.quitDriver(driver);
+	}
+
+	@Dado("que eu esteja no site")
+	public void que_eu_esteja_no_site() {
+
+		driver = DriverElement.getChromeDriver();
+		logoutLogic = PageFactory.initElements(driver, LogoutLogic.class);
+		logoutLogic.validarSite();
+	}
+
+	@Quando("clico no user")
+	public void clico_no_user() throws InterruptedException {
+
+		logoutLogic.clicarNoIconeUser();
+
+	}
+
+	@E("preencho o login")
+	public void preencho_o_login() throws InterruptedException {
+
+		logoutLogic.preencherUsuario("Max_Steel249");
+
+	}
+
+	@E("preencho a password")
+	public void preencho_a_password() throws InterruptedException {
+
+		logoutLogic.preencherSenha("123456aA");
+	}
+
+	@E("clico em logar")
+	public void clico_em_logar() {
+
+		logoutLogic.clicarEmEntrar();
+	}
+
+	@E("clico em user apos o login")
+	public void clico_em_user_apos_o_login() throws InterruptedException {
+
+		logoutLogic.clicarNoIconeUser();
+	}
+
+	@E("clico em Sign Out")
+	public void clico_em_sign_out() throws InterruptedException {
+
+		logoutLogic.clicarEmSignOut();
+
+	}
+
+	@Entao("realizo o logout")
+	public void realizo_o_logout() {
+
+		logoutLogic.validaLogOut();
+	}
+}

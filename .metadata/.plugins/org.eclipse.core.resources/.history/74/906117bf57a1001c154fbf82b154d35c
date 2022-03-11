@@ -1,0 +1,25 @@
+package br.com.advantage.page;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
+
+public class HomePage {
+
+	final WebDriver driver;
+
+	public HomePage(WebDriver driver) {
+
+		PageFactory.initElements(driver, this);
+
+		this.driver = driver;
+	}
+	
+	@FindBy(how = How.XPATH, using = "//a[@id='hrefUserIcon']")
+
+	public WebElement buttonUser;
+	
+	
+}

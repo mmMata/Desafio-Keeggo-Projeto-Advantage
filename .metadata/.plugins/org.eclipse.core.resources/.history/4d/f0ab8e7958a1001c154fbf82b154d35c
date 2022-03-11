@@ -1,0 +1,58 @@
+package br.com.advantage.logic;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+
+
+import br.com.advantage.page.LoginPage;
+
+public class LoginLogic {
+
+	private LoginPage loginPage;
+	
+
+	final WebDriver driver;
+
+	public LoginLogic(WebDriver driver) 
+	{
+		loginPage = new LoginPage(driver);
+		this.driver = driver;
+	}
+	
+	public void validarSite()
+	{
+		driver.getCurrentUrl().equals("http://advantageonlineshopping.com/#/");
+	}
+	
+	public void clicarNoIconeUser()
+	{
+		JavascriptExecutor jsexe = (JavascriptExecutor) driver;
+		jsexe.executeScript("javascript:void(0)", loginPage.buttonUser);
+		loginPage.buttonUser.click();
+	}
+	
+	public void preencherUsuario(String usuario)
+	{
+		loginPage.buttonUser.sendKeys(usuario);
+	}
+	
+	public void preencherSenha(String senha)
+	{
+		loginPage.inputPassword.sendKeys(senha);
+	}
+	
+	public void clicarEmEntrar()
+	{
+		loginPage.buttonSignIn.click();
+	}
+	
+	public void validarLogin()
+	{
+		assert(driver.getPageSource()).contains("Max_Steel249");
+	}
+	
+	public void validarTelaDeLogin()
+	{
+		assert(driver.getPageSource()).contains("OR");
+	}
+}

@@ -1,0 +1,19 @@
+package br.com.advantage.helpers;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+public class Constant {
+
+	final WebDriver driver;
+
+	public static final String File_DataUserRegister = "massas.xlsx";
+
+	public Constant(WebDriver driver) {
+
+		PageFactory.initElements(driver, this);
+		
+		this.driver = driver;
+	}
+
+}
