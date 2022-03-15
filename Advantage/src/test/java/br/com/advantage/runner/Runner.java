@@ -6,8 +6,8 @@ import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.Cucumber;
 
     @RunWith(Cucumber.class)
-	@CucumberOptions(features = "classpath:features/login/login.feature",
-	tags="@logout",
+	@CucumberOptions(features = "classpath:features/consultarAdicionar/consultarAdicionar.feature",
+	tags="@adicionaritem",
 	glue = "br.com.advantage.steps")
     
 

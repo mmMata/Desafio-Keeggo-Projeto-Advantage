@@ -1,0 +1,45 @@
+package br.com.advantage.logic;
+
+import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+
+import br.com.advantage.page.ConsultaPage;
+
+
+public class ConsultaLogic {
+
+	final WebDriver driver;
+	
+	ConsultaPage consultaPage;
+
+	public ConsultaLogic(WebDriver driver) 
+	{	
+		consultaPage = new ConsultaPage(driver);
+		this.driver = driver;
+	}
+	
+	public void clicarNaLupaDePesquisa() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		JavascriptExecutor jsexe = (JavascriptExecutor) driver;
+		Thread.sleep(3000);
+		jsexe.executeScript("javascript:void(0)", consultaPage.inputSearch);
+	    consultaPage.inputSearch.click();	
+	}
+	
+	public void digitarItem(String item)
+	{
+		consultaPage.inputAutoComplete.sendKeys(item);
+	}
+	
+	public void apagarItem()
+	{
+		consultaPage.inputAutoComplete.clear();
+	}
+	
+	public void validaConsultaItem()
+	{
+		Assert.assertTrue(consultaPage.item.isDisplayed());
+	}
+}

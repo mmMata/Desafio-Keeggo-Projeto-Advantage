@@ -1,0 +1,18 @@
+package br.com.advantage.page;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+public class ConsultaPage {
+
+	final WebDriver driver;
+
+	public ConsultaPage(WebDriver driver) {
+
+		PageFactory.initElements(driver, this);
+
+		this.driver = driver;
+	}
+	
+	
+}

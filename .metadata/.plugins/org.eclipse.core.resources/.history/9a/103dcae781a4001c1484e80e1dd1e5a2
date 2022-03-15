@@ -1,0 +1,34 @@
+package br.com.advantage.logic;
+
+import org.openqa.selenium.WebDriver;
+
+import br.com.advantage.page.ConsultaPage;
+
+
+public class ConsultaLogic {
+
+	final WebDriver driver;
+	
+	ConsultaPage consultaPage;
+
+	public ConsultaLogic(WebDriver driver) 
+	{	
+		consultaPage = new ConsultaPage(driver);
+		this.driver = driver;
+	}
+	
+	public void clicarNaLupaDePesquisa()
+	{
+	 consultaPage.inputSearch.click();	
+	}
+	
+	public void digitarItem(String item)
+	{
+		consultaPage.inputAutoComplete.sendKeys(item);
+	}
+	
+	public void apagarItem()
+	{
+		consultaPage.inputAutoComplete.clear();
+	}
+}

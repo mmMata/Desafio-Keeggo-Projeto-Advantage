@@ -1,0 +1,13 @@
+#language : pt
+
+@consulta
+Funcionalidade: Consulta
+
+@consultaritem
+Esquema do Cenario : Realizar consulta de item
+Dado que eu esteja na pagina
+Quando clico no icone de user
+E preencho o login
+E preencho a password
+E clico em sign in
+

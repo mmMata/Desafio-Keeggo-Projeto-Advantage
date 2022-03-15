@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.Float"/>
-    <fullyQualifiedTypeName name="io.cucumber.messages.internal.com.google.protobuf.compiler.PluginProtos.CodeGeneratorResponse.File"/>
     <fullyQualifiedTypeName name="org.apache.commons.io.input.XmlStreamReader"/>
     <fullyQualifiedTypeName name="lombok.Cleanup"/>
     <fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.Workbook"/>
@@ -44,15 +42,10 @@
     <fullyQualifiedTypeName name="io.cucumber.junit.CucumberOptions"/>
     <fullyQualifiedTypeName name="br.com.advantage.logic.Cadastro"/>
     <fullyQualifiedTypeName name="br.com.advantage.page.HomePage"/>
-    <fullyQualifiedTypeName name="br.com.advantage.logic.LoginLogic"/>
-    <fullyQualifiedTypeName name="io.cucumber.java.pt.Dado"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.Wait"/>
     <fullyQualifiedTypeName name="org.junit.Assert"/>
     <fullyQualifiedTypeName name="br.com.advantage.page.LogoutPage"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
-    <fullyQualifiedTypeName name="io.cucumber.java.pt.Quando"/>
-    <fullyQualifiedTypeName name="io.cucumber.java.pt.E"/>
-    <fullyQualifiedTypeName name="io.cucumber.java.pt.Entao"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.support.PageFactory"/>
     <fullyQualifiedTypeName name="br.com.advantage.page.LoginPage"/>
     <fullyQualifiedTypeName name="br.com.advantage.logic.LogoutLogic"/>
@@ -60,4 +53,11 @@
     <fullyQualifiedTypeName name="org.openqa.selenium.support.FindBy"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.support.How"/>
+    <fullyQualifiedTypeName name="br.com.advantage.page.ConsultaPage"/>
+    <fullyQualifiedTypeName name="io.cucumber.java.pt.Dado"/>
+    <fullyQualifiedTypeName name="io.cucumber.java.pt.Quando"/>
+    <fullyQualifiedTypeName name="io.cucumber.java.pt.E"/>
+    <fullyQualifiedTypeName name="io.cucumber.java.pt.Entao"/>
+    <fullyQualifiedTypeName name="br.com.advantage.logic.LoginLogic"/>
+    <fullyQualifiedTypeName name="br.com.advantage.logic.ConsultaLogic"/>
 </qualifiedTypeNameHistroy>

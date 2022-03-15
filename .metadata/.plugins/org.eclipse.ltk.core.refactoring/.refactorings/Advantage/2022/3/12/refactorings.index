@@ -1,0 +1,11 @@
+1647369005877	Rename resource 'consulta.feature'
+1647369038444	Rename type 'ConsultaPage'
+1647369061649	Rename type 'ConsultaLogic'
+1647369087528	Rename type 'ConsultaStep'
+1647370205001	Delete element
+1647370284215	Rename resource 'login.feature'
+1647370306001	Rename type 'LoginStep'
+1647370319859	Rename type 'LoginPage'
+1647370370777	Rename type 'LoginLogic'
+1647372490510	Rename resource 'login'
+1647372502551	Rename resource 'consulta'
