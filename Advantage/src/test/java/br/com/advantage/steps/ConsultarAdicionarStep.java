@@ -87,31 +87,31 @@ public class ConsultarAdicionarStep {
 	}
 	
 	@E("clico no produto")
-	public void clico_no_produto() {
+	public void clico_no_produto() throws InterruptedException {
 	    
 		consultaLogic.clicarNoProduto();
 	}
 
 	@E("clico em adicionar ao carrinho")
-	public void clico_em_adicionar_ao_carrinho() {
+	public void clico_em_adicionar_ao_carrinho() throws InterruptedException {
 	    
 		consultaLogic.adicionarNoCarrinho();
 	}
 
 	@E("clico no carrinho")
-	public void clico_no_carrinho() {
+	public void clico_no_carrinho() throws InterruptedException {
 	    
 		consultaLogic.clicarEmCarrinho();
 	}
 
 	@Entao("valido que o item foi adicionado")
-	public void valido_que_o_item_foi_adicionado() {
+	public void valido_que_o_item_foi_adicionado() throws InterruptedException {
 	  
 		consultaLogic.validaItemAdicionado();
 	}
 	
 	@E("valido que o item esta no carrinho")
-	public void valido_que_o_item_esta_no_carrinho() {
+	public void valido_que_o_item_esta_no_carrinho() throws InterruptedException {
 	  
 		consultaLogic.validaItemAdicionado();
 	}
@@ -123,7 +123,7 @@ public class ConsultarAdicionarStep {
 	}
 
 	@Entao("valido que o item foi removido")
-	public void valido_que_o_item_foi_removido() {
+	public void valido_que_o_item_foi_removido() throws InterruptedException {
 	  
 		consultaLogic.validaRemocao();
 	}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Runner" project="Advantage" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="br.com.advantage.runner.Runner" time="38.707">
+    <testsuite name="Consulta" time="38.707">
+      <testcase name="Adicionar item no carrinho" classname="Consulta" time="38.707">
+        <error>org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression ((//button[@id='checkOutPopUp'])[2] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '((//button[@id='checkOutPopUp'])[2]' is not a valid XPath expression.
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'RSI0188', ip: '192.168.0.218', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\MATHEU~1.MAT\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:57325}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fa39ba8a80ed6a985734c4e7394ca2c6
+*** Element info: {Using=xpath, value=((//button[@id='checkOutPopUp'])[2]}&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)&#13;
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)&#13;
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#13;
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#13;
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#13;
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#13;
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)&#13;
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)&#13;
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)&#13;
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)&#13;
+	at jdk.proxy2/jdk.proxy2.$Proxy19.isDisplayed(Unknown Source)&#13;
+	at br.com.advantage.logic.ConsultarAdicionarLogic.validaItemAdicionado(ConsultarAdicionarLogic.java:67)&#13;
+	at br.com.advantage.steps.ConsultarAdicionarStep.valido_que_o_item_foi_adicionado(ConsultarAdicionarStep.java:110)&#13;
+	at ✽.valido que o item foi adicionado(classpath:features/consultarAdicionar/consultarAdicionar.feature:43)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

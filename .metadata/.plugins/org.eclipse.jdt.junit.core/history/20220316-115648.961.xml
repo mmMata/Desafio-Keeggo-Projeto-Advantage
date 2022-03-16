@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Runner" project="Advantage" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="br.com.advantage.runner.Runner" incomplete="true">
+    <testsuite name="Consulta" incomplete="true">
+      <testcase name="Adicionar item no carrinho" classname="Consulta" incomplete="true"/>
+    </testsuite>
+  </testsuite>
+</testrun>

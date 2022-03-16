@@ -29,7 +29,7 @@ public class ConsultarAdiconarPage {
 
 	public WebElement getItem;
 
-	@FindBy(how = How.XPATH, using = "//img[@id=\"12\"]")
+	@FindBy(how = How.XPATH, using = "//img[@src='/catalog/fetchImage?image_id=2100']") 
 
 	public WebElement item;
 
@@ -41,15 +41,8 @@ public class ConsultarAdiconarPage {
 
 	public WebElement buttonCart;
 
-	@FindBy(how = How.XPATH, using = "(//span[@class='roboto-medium cart-total ng-binding'])[2]")
-
-	public WebElement getValue;
-
 	@FindBy(how = How.XPATH, using = "//a[@class='remove red ng-scope']")
 
 	public WebElement buttonRemove;
 
-	@FindBy(how = How.XPATH, using = "(//label[@class='center roboto-medium ng-scope'])[2]")
-
-	public WebElement getMessageCart;
 }

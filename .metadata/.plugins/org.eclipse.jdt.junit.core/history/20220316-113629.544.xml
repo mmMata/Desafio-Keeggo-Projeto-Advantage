@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Runner" project="Advantage" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="br.com.advantage.runner.Runner" time="30.275">
+    <testsuite name="Consulta" time="30.275">
+      <testcase name="Adicionar item no carrinho" classname="Consulta" time="30.275">
+        <error>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;img id="12" alt="" class="imgProduct" data-ng-class="{ outOfStock : product.productStatus == 'OutOfStock' } " data-ng-src="/catalog/fetchImage?image_id=2100" src="/catalog/fetchImage?image_id=2100"&gt; is not clickable at point (387, 292). Other element would receive the click: &lt;div class="searchPopUp" data-ng-click="$event.stopPropagation()"&gt;...&lt;/div&gt;
+  (Session info: chrome=99.0.4844.51)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'RSI0188', ip: '192.168.0.218', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\MATHEU~1.MAT\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:56581}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 651a2f0846c1bed048bd566384451b9b&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)&#13;
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)&#13;
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#13;
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#13;
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#13;
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#13;
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#13;
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)&#13;
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)&#13;
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)&#13;
+	at jdk.proxy2/jdk.proxy2.$Proxy19.click(Unknown Source)&#13;
+	at br.com.advantage.logic.ConsultarAdicionarLogic.clicarNoProduto(ConsultarAdicionarLogic.java:49)&#13;
+	at br.com.advantage.steps.ConsultarAdicionarStep.clico_no_produto(ConsultarAdicionarStep.java:92)&#13;
+	at ✽.clico no produto(classpath:features/consultarAdicionar/consultarAdicionar.feature:40)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>
